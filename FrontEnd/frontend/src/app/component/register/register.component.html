@@ -1,0 +1,65 @@
+<!-- <p>register works!</p> -->
+
+<div class="form-container">
+    <form (ngSubmit)="register()">
+        <div>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" [(ngModel)]="registration.firstname" required>
+        </div>
+        <div>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" [(ngModel)]="registration.lastname" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" [(ngModel)]="registration.email" required>
+        </div>
+        <div>
+            <label for="userType">User Type:</label>
+            <select id="userType" name="userType" [(ngModel)]="registration.usertype" required>
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+            </select>
+        </div>
+        <div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" [(ngModel)]="registration.dob" required>
+        </div>
+        <div>
+            <label for="mobile">Mobile:</label>
+            <input type="text" id="mobile" name="mobile" [(ngModel)]="registration.mobile" required>
+        </div>
+        <div>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" [(ngModel)]="registration.address" required>
+        </div>
+        <div>
+            <label for="zipcode">Zipcode:</label>
+            <input type="text" id="zipcode" name="zipcode" [(ngModel)]="registration.zipcode" pattern="[0-9]{6}"
+                required>
+        </div>
+        <div>
+            <label for="profileImage">Profile Image:</label>
+            <input type="file" id="profileImage" name="profileImage" (change)="onFileSelected($event)" accept="image/*"
+                required>
+            <img [src]="imageUrl" alt="View Image">
+            <!-- <img src="file:///C:/Users/apekshameshram/Downloads/image.jpg" alt="Profile Image"> -->
+
+        </div>
+
+        <div>
+            <label for="country">Country:</label>
+            <select id="country" name="country" [(ngModel)]="countryId" required>
+                <option *ngFor="let country of countries" [value]="country.countryName">{{country.countryName}}</option>
+            </select>
+        </div>
+        <div>
+            <label>State:</label>
+            <select id="state" name="state" [(ngModel)]="registration.states" required>
+                <option *ngFor="let state of states" [value]="state.id">{{state.stateName}}</option>
+            </select>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+</div>

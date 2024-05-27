@@ -1,0 +1,35 @@
+button{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #007bff;
+}
+
+
+.right-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .right-buttons button {
+    min-width: 64px;
+    margin-left: 8px;
+  }
+  
+  .mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
+  

@@ -1,0 +1,57 @@
+/* styles.css */
+
+/* Form container */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Form input fields */
+  .form-container input,
+  .form-container select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Submit button */
+  .form-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Submit button hover effect */
+  .form-container button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Form labels */
+  .form-container label {
+    margin-bottom: 5px;
+  }
+  
+  /* File input */
+  .form-container input[type="file"] {
+    margin-bottom: 10px;
+  }
+  
+  /* Error message */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
